@@ -13,7 +13,7 @@ import makeTheme from "../../../helpers/makeTheme";
 import { LANGS, LANGS_DIRS, I18N_MAP } from "../../../constants/global";
 
 function Theme({ children }) {
-  const lang = "en"; // try to change this to "ar" and check ui/dom
+  const lang = "ar"; // try to change this to "en" and check ui/dom
 
   const { i18n } = useTranslation();
 
