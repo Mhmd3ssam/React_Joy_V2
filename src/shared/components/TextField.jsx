@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { useState } from "react";
 
 import {
@@ -81,5 +83,28 @@ function TextField({
     </FormControl>
   );
 }
+
+TextField.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  error: PropTypes.bool,
+  helperText: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  required: PropTypes.bool,
+  size: PropTypes.oneOf(["small", "medium"]),
+  placeholder: PropTypes.string,
+  disabled: PropTypes.bool,
+  rows: PropTypes.number,
+
+  icon: PropTypes.string,
+  iconColor: PropTypes.string,
+  iconSize: PropTypes.oneOf(["small", "medium"]),
+  iconPosition: PropTypes.oneOf(["start", "end"]),
+
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+  onBlur: PropTypes.func,
+  onFocus: PropTypes.func,
+};
 
 export default TextField;
