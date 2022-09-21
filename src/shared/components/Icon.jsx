@@ -5,7 +5,7 @@ import { SvgIcon } from "@mui/material";
 function Icon({ icon, size, color }) {
   return (
     <SvgIcon color={color || "inherit"} fontSize={size || "inherit"}>
-      <path icon={icon} />
+      <path d={icon} />
     </SvgIcon>
   );
 }
