@@ -70,7 +70,7 @@ function TextField({
           !!onBlur && onBlur(e);
         }}
         onFocus={(e) => {
-          setIsFocused(false);
+          setIsFocused(true);
           !!onFocus && onFocus(e);
         }}
         startAdornment={!!icon && iconPosition === "start" && renderIcon()}
