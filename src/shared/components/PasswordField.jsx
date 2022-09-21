@@ -11,9 +11,9 @@ import {
   IconButton,
 } from "@mui/material";
 
-import { mdiLock, mdiLockOff } from "@mdi/js";
+import { mdiLockOutline, mdiLockOpenVariantOutline } from "@mdi/js";
 
-import Icon from "@mui/material";
+import Icon from "./Icon";
 
 function PasswordField({
   name,
@@ -31,7 +31,7 @@ function PasswordField({
   error,
   helperText,
 }) {
-  const [showPassword, setShowPassord] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
 
   return (
@@ -66,11 +66,12 @@ function PasswordField({
             <IconButton
               edge="end"
               size="small"
-              onClick={() => setShowPassord(!showPassword)}
+              onClick={() => setShowPassword(!showPassword)}
             >
               <Icon
-                icon={showPassword ? mdiLockOff : mdiLock}
+                icon={showPassword ? mdiLockOpenVariantOutline : mdiLockOutline}
                 size={size === "small" ? "small" : "medium"}
+                color="primary"
               />
             </IconButton>
           </InputAdornment>
